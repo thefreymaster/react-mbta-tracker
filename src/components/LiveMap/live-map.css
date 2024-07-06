@@ -1,3 +1,5 @@
-.map-container {
-    height: 400px;
+.map-container{
+    min-width: 100%;
+    width: 90vw;
+    overflow: hidden;
 }

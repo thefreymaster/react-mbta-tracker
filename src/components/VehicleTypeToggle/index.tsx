@@ -15,6 +15,8 @@ import {
   getNavigationBackgroundColor,
 } from "../../utils/getColors";
 import MapInteractions from "../MapInteractions";
+import { useIsInstalled } from "../../hooks/useIsInstalled";
+import { getPosition } from "../../utils/getPosition";
 
 const transitTypes = new Map();
 transitTypes.set("0", "lite-rail");
@@ -130,14 +132,16 @@ const NavIcon = ({
 };
 
 export const VehicleTypeToggle = () => {
+  const isInstalled = useIsInstalled();
+
   const position = isMobile
     ? {
-        bottom: 30,
-        left:"calc(50% - 110px)",
+        bottom: getPosition(isInstalled, -20, 30, 10),
+        left: "calc(50% - 110px)",
         zIndex: 100,
-        display: 'flex'
+        display: "flex",
       }
-    : { top: 75, left: 20, zIndex: 100 };
+    : { top: getPosition(isInstalled, 60, 10, 70), left: 20, zIndex: 100 };
   const { colorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
 

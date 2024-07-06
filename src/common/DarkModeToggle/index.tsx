@@ -10,14 +10,17 @@ import {
 } from "../../utils/getColors";
 import MapInteractions from "../../components/MapInteractions";
 import { IoMoon, IoSunny } from "react-icons/io5";
+import { useIsInstalled } from "../../hooks/useIsInstalled";
+import { getPosition } from "../../utils/getPosition";
 
 export const DarkModeToggle = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
+  const isInstalled = useIsInstalled();
 
   const position = isMobile
     ? {
-        bottom: 30,
+        bottom: getPosition(isInstalled, -20, 30, 10),
         right: 20,
       }
     : { top: 420, left: 20 };
