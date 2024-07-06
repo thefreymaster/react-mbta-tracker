@@ -15,15 +15,14 @@ const AppHeader = () => {
     <MTHeader
       style={{
         position: "fixed",
-        top: getPosition(isInstalled, 60, 20, 10),
+        top: getPosition(isInstalled, 60, 10, 10),
         backgroundColor: "transparent",
         display: "flex",
         alignItems: "center",
         borderBottom: "0px",
+        left: "10px"
       }}
       height={60}
-      p="xs"
-      pl="lg"
       onClick={() => history.push("/")}
     >
       <AppTitle />

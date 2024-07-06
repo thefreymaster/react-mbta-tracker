@@ -23,8 +23,8 @@ export const LinesToggle = ({
 
   const position = isMobile
     ? {
-        bottom: getPosition(isInstalled, -20, 30, 10),
-        left: 20,
+        bottom: getPosition(isInstalled, -10, 20, 10),
+        left: 10,
       }
     : { top: 310, left: 20 };
 

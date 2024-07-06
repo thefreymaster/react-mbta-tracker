@@ -136,7 +136,7 @@ export const VehicleTypeToggle = () => {
 
   const position = isMobile
     ? {
-        bottom: getPosition(isInstalled, -20, 30, 10),
+        bottom: getPosition(isInstalled, -20, 20, 10),
         left: "calc(50% - 110px)",
         zIndex: 100,
         display: "flex",

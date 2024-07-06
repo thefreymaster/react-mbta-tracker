@@ -17,8 +17,8 @@ export const SettingsDrawer = () => {
   const isInstalled = useIsInstalled();
 
   const position = {
-    top: getPosition(isInstalled, 60, 20, 20),
-    right: 20,
+    top: getPosition(isInstalled, 60, 10, 20),
+    right: 10,
     zIndex: 100,
   };
   const { colorScheme } = useMantineColorScheme();
