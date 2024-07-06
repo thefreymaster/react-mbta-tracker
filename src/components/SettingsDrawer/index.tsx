@@ -17,7 +17,7 @@ export const SettingsDrawer = () => {
   const isInstalled = useIsInstalled();
 
   const position = {
-    top: getPosition(isInstalled, 60, 20, 10),
+    top: getPosition(isInstalled, 60, 20, 20),
     right: 20,
     zIndex: 100,
   };
