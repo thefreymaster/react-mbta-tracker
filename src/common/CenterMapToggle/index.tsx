@@ -7,6 +7,8 @@ import {
   getNavigationBackgroundColor,
 } from "../../utils/getColors";
 import MapInteractions from "../../components/MapInteractions";
+import { useIsInstalled } from "../../hooks/useIsInstalled";
+import { getPosition } from "../../utils/getPosition";
 
 export const CenterMapToggle = ({
   handleOnMoveToCenter,
@@ -15,10 +17,11 @@ export const CenterMapToggle = ({
 }) => {
   const { colorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
+  const isInstalled = useIsInstalled();
 
   const position = isMobile
     ? {
-        bottom: 140,
+        bottom: getPosition(isInstalled, 90, 140, 10),
         right: 20,
       }
     : { top: 540, left: 20 };

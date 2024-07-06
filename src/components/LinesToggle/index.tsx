@@ -7,6 +7,8 @@ import {
   getNavigationBackgroundColor,
 } from "../../utils/getColors";
 import MapInteractions from "../MapInteractions";
+import { useIsInstalled } from "../../hooks/useIsInstalled";
+import { getPosition } from "../../utils/getPosition";
 
 export const LinesToggle = ({
   linesVisible,
@@ -17,9 +19,11 @@ export const LinesToggle = ({
 }) => {
   const { colorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
+  const isInstalled = useIsInstalled();
+
   const position = isMobile
     ? {
-        bottom: 30,
+        bottom: getPosition(isInstalled, -20, 30, 10),
         left: 20,
       }
     : { top: 310, left: 20 };

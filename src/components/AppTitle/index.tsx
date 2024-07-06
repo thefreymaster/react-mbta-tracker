@@ -19,7 +19,7 @@ export const AppTitle = () => {
           colorScheme === "dark"
             ? DARK_BACKGROUND_COLOR
             : BRIGHT_BACKGROUND_COLOR,
-        borderRadius: "100px 20px 100px 100px",
+        borderRadius: "20px 100px 100px 100px",
         boxShadow: BOX_SHADOW,
         backdropFilter: "blur(10px)"
       })}

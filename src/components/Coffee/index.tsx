@@ -21,7 +21,7 @@ const Coffee = () => {
       <Box
         sx={(theme) => ({
           position: "fixed",
-          bottom: isMobile ? "80px" : "20px",
+          bottom: isMobile ? "100px" : "20px",
           left: "calc(50% - 110px)",
           boxShadow: theme.shadows.lg,
           borderRadius: "100px",

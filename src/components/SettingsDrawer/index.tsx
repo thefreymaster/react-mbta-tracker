@@ -1,8 +1,4 @@
-import {
-  Drawer,
-  useMantineColorScheme,
-  useMantineTheme,
-} from "@mantine/core";
+import { Drawer, useMantineColorScheme, useMantineTheme } from "@mantine/core";
 import { useState } from "react";
 import MapInteractions from "../MapInteractions";
 import {
@@ -12,11 +8,19 @@ import {
 } from "../../utils/getColors";
 import { IoSettings } from "react-icons/io5";
 import StatusBar from "../../common/StatusBar";
+import { isMobile } from "react-device-detect";
+import { getPosition } from "../../utils/getPosition";
+import { useIsInstalled } from "../../hooks/useIsInstalled";
 
 export const SettingsDrawer = () => {
   const [opened, setOpened] = useState(false);
+  const isInstalled = useIsInstalled();
 
-  const position = { top: 15, right: 20, zIndex: 100 };
+  const position = {
+    top: getPosition(isInstalled, 60, 20, 20),
+    right: 20,
+    zIndex: 100,
+  };
   const { colorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
 
@@ -30,7 +34,7 @@ export const SettingsDrawer = () => {
         size="md"
         overlayOpacity={0.55}
         overlayBlur={3}
-        position="right"
+        position={isMobile ? "bottom" : "right"}
       >
         {/* Drawer content */}
         <StatusBar />
