@@ -32,7 +32,7 @@ const App = () => {
 
     if (colorScheme === "light") {
       html.style.backgroundColor = theme.colors.gray[1];
-      setThemeColor(theme.colors.gray[1]);
+      setThemeColor("#f6f2e8");
     } else {
       html.style.backgroundColor = theme.colors.gray[8];
       setThemeColor("#1a202c");

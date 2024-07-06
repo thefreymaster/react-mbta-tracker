@@ -21,8 +21,8 @@ export const CenterMapToggle = ({
 
   const position = isMobile
     ? {
-        bottom: getPosition(isInstalled, 90, 140, 10),
-        right: 20,
+        bottom: getPosition(isInstalled, 90, 130, 10),
+        right: 10,
       }
     : { top: 540, left: 20 };
 

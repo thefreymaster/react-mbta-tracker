@@ -20,8 +20,8 @@ export const DarkModeToggle = () => {
 
   const position = isMobile
     ? {
-        bottom: getPosition(isInstalled, -20, 30, 10),
-        right: 20,
+        bottom: getPosition(isInstalled, -20, 20, 10),
+        right: 10,
       }
     : { top: 420, left: 20 };
 
