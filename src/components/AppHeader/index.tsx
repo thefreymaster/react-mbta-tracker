@@ -20,7 +20,7 @@ const AppHeader = () => {
         display: "flex",
         alignItems: "center",
         borderBottom: "0px",
-        left: "10px"
+        left: "20px"
       }}
       height={60}
       onClick={() => history.push("/")}

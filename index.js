@@ -183,7 +183,7 @@ stream.addEventListener("update", (event) => {
   io.emit(parsed.id, event);
 });
 
-const port = 5500;
+const port = 9001;
 
 httpServer.listen(process.env.PORT || port, () => {
   console.log("MBTA Spy running");
